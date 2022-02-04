@@ -1,7 +1,8 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "../Pages/Home";
-import Pokedex from "../Pages/Pokedex";
-import PokemonDetails from "../Pages/PokemonDetails";
+import Home from "../Pages/Home/Home";
+import Pokedex from "../Pages/Pokedex/Pokedex"
+import PokemonDetails from "../Pages/PokemonDetails/PokemonDetails"
+
 
 const Router = () => {
   return (
@@ -18,6 +19,11 @@ const Router = () => {
         <Route exact path={"pkmdetails"}>
           <PokemonDetails />
         </Route>
+
+        <Route>
+          <div> Página não encontrada! </div>
+        </Route>
+
       </Switch>
     </BrowserRouter>
   );
