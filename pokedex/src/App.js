@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import { GlobalStyles } from "./GlobalStyles";
 import Router from "./Route/Router";
 import GlobalContext from "./context";
@@ -15,14 +14,14 @@ const App = () => {
     axios
       .get(`${BASE_URL}`)
       .then((res) => {
-        setPokemonList([])
+        // setPokemonList([])
         const initialPokemonList = res.data.results
         initialPokemonList.forEach((item) => {
           axios
           .get(`${item.url}`)
           .then((res) => {
             pokemonList.push(res.data)
-            console.log(res.data)
+            // console.log(res.data)
           })
           .catch((err) => {
             console.log("Erro ao extrair detalhes dos pokemons",err)
@@ -36,7 +35,7 @@ const App = () => {
 
 
   return (
-    <GlobalContext.Provider value={pokemonList}>
+    <GlobalContext.Provider value={{pokemonList, setPokemonList}}>
       <GlobalStyles />
       <Router />
     </GlobalContext.Provider>

@@ -13,8 +13,9 @@ export const Container = styled.div`
             height: 50%;
             width: 15%;
         }
-        img {
-            height: 70%;
-            width: 4%;
-        }
+`
+export const Image = styled.img`
+    width: 50px;
+    height: 50px;
+
 `

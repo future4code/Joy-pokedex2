@@ -1,8 +1,9 @@
 import { Container } from "./styled";
 import { useHistory } from "react-router-dom"
 import Pokebola from "../../Assets/Imagens/pokebola.png"
+import { Image } from "./styled";
 
-const Header = () => {
+const Header = (props) => {
 
     const history = useHistory()
 
@@ -16,9 +17,9 @@ const Header = () => {
 
     return(
         <Container>
-            <button onClick={goToPokedex}>Ir Para Pokedex</button>
-            <img alt="pokebola" src={Pokebola}/>
-            <button onClick={goHome}>Ir para lista de Pokemons</button>
+            <button onClick={goToPokedex}>{props.firstButton}</button>
+            <Image alt="pokebola" src={Pokebola}/>
+            <button onClick={goHome}>{props.secondButton}</button>
         </Container>
 
     )
