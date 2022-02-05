@@ -4,7 +4,7 @@ import Header from "../../Components/Header/Header";
 const Pokedex = () => {
   return (
     <div>
-      <Header />
+      <Header firstButton={"Pokedex"} secondButton={"Pokelist"} />
       Pokedex
     </div>
   );

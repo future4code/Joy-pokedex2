@@ -2,26 +2,52 @@ import React, { useContext } from "react";
 import Header from "../../Components/Header/Header";
 import GlobalContext from "../../context";
 import { useHistory } from "react-router-dom";
+import PokemonCard from "../../Components/PokemonCard/PokemonCard";
+import { Container } from "./styled";
 
 const Home = () => {
-  const { pokemonList } = useContext(GlobalContext);
+  const { pokemonList, setPokemonList } = useContext(GlobalContext);
   const history = useHistory();
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const pokemonMapped = pokemonList.map((pokemon) => {
+    return (
+      <PokemonCard key={pokemon && pokemon.id}
+      image = {
+        pokemon && pokemon.sprites.versions["generation-v"]["black-white"].animated
+          .front_default
+      }
+      
+      name = {capitalizeFirstLetter(pokemon && pokemon.name)}
+      
+      > 
+
+        {/* <img
+          alt={pokemon.name}
+          src={
+            pokemon.sprites.versions["generation-v"]["black-white"].animated
+              .front_default
+          }
+        />
+        <p>
+          <strong>{capitalizeFirstLetter(pokemon.name)}</strong>
+        </p>
+
+        <p>#{pokemon.id}</p> */}
+      </PokemonCard>
+    );
+  });
 
   return (
     <div>
-      <Header />
-      <div>
-        Home
-        {pokemonList &&
-          pokemonList.map((pokemon) => {
-            return (
-              <div key={pokemon.id}>
-                <p>{pokemon.name}</p>
-                <img alt={pokemon.name} src={pokemon.sprites.front_default} />
-              </div>
-            );
-          })}
-      </div>
+      <Header 
+      firstButton = {"Pokedex"}
+      secondButton = {"Pokelist"}
+      />
+      <Container>{pokemonMapped}</Container>
     </div>
   );
 };
