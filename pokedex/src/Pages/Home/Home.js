@@ -22,7 +22,7 @@ const Home = () => {
       }
       
       name = {capitalizeFirstLetter(pokemon && pokemon.name)}
-      
+      id = {pokemon.id}
       > 
 
         {/* <img
