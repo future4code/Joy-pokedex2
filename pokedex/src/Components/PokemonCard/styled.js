@@ -6,7 +6,7 @@ export const ContainerCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    border: 2px solid black;
+  border: 2px solid black;
   padding: 10px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -21,12 +21,26 @@ export const ContainerCard = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
 
   button {
-    margin: 5px 0px 0px 0px;
+    margin: 0px 5px 0px 5px;
+    padding: 5px 5px 5px 5px;
     height: 100%;
     width: 50%;
+    justify-content: space-between;
+    background-color: #2a413d;
+    color: #f7f7fd;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
   }
   img {
-    height: 90%;
-    width: 90%;
+    height: 4rem;
+    width: 4rem;
   }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  width: 160px;
+  margin-top: 20px;
 `;
