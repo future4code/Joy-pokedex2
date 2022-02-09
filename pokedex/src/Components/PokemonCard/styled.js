@@ -32,10 +32,13 @@ export const ContainerCard = styled.div`
     border: none;
     cursor: pointer;
     font-weight: bold;
+    :hover{
+      background-color: red;
+    }
   }
   img {
-    height: 4rem;
-    width: 4rem;
+    height: 7rem;
+    width: 7rem;
   }
 `;
 

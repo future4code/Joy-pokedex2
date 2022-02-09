@@ -55,8 +55,7 @@ const Home = () => {
               key={pokemon && pokemon.id}
               image={
                 pokemon &&
-                pokemon.sprites.versions["generation-v"]["black-white"].animated
-                  .front_default
+                pokemon.sprites.other["official-artwork"].front_default
               }
               name={capitalizeFirstLetter(pokemon && pokemon.name)}
               id={pokemon.id}
