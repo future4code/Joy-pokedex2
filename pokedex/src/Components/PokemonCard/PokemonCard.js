@@ -1,15 +1,13 @@
-import React, { useContext }  from "react";
+import React, { useContext } from "react";
 import { ContainerCard, ButtonContainer } from "./styled";
 import { useHistory } from "react-router-dom";
-import { GlobalContext } from "../../global/GlobalContext";
 
 const PokemonCard = (props) => {
-  const { pokemonList } = useContext(GlobalContext);
-  const history = useHistory()
+  const history = useHistory();
 
-  const goToDetails = () => {
-    history.push(`/pkmdetails/${props.id}`)
-  }
+  const goToDetails = (id) => {
+    history.push(`/pkmdetails/${id}`);
+  };
 
   return (
     <ContainerCard>
@@ -24,7 +22,13 @@ const PokemonCard = (props) => {
       </div>
       <ButtonContainer>
         <button>Adicionar</button>
-        <button onClick={() => {goToDetails()}}>Detalhes</button>
+        <button
+          onClick={() => {
+            goToDetails(props.id);
+          }}
+        >
+          Detalhes
+        </button>
       </ButtonContainer>
     </ContainerCard>
   );
