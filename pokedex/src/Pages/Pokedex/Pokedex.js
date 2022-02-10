@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Header from "../../Components/Header/Header";
 import { GlobalContext } from "../../global/GlobalContext";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
+import { Container } from "../../Pages/Pokedex/styled";
 
 const Pokedex = () => {
   const { pokedex, setPokedex } = useContext(GlobalContext);
@@ -11,28 +12,21 @@ const Pokedex = () => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
-  const removePokemon = (pokemonToRemove) => {
+  const removePokemon = (poke) => {
     console.log("entrei");
 
-    const position = pokedex.findIndex((pokemon) => {
-      return pokemon.id === pokemonToRemove.id;
-    });
-
-    let newPokedex = [...pokedex];
-
-    console.log(newPokedex);
-
-    if (newPokedex[position] === 1) {
-      newPokedex.splice(position, 1);
-    }
+    const newPokedex = pokedex.filter((item) => item.id !== poke.id);
 
     setPokedex(newPokedex);
+
     console.log(newPokedex);
   };
 
   const pokedexList =
     pokedex.length === 0 ? (
-      <h1><strong>Vá caçar seus pokemons!</strong></h1>
+      <h1>
+        <strong>Vá caçar seus pokemons!</strong>
+      </h1>
     ) : (
       pokedex.map((pokemon) => {
         return (
@@ -43,7 +37,7 @@ const Pokedex = () => {
             }
             name={capitalizeFirstLetter(pokemon && pokemon.name)}
             id={pokemon.id}
-            onClickRemove={() => removePokemon(pokemon)}
+            onClickHandle={() => removePokemon(pokemon)}
             buttonName={"Remover"}
           />
         );
@@ -53,8 +47,9 @@ const Pokedex = () => {
   return (
     <div>
       <Header firstButton={"Pokedex"} secondButton={"Pokelist"} />
+
       <div>
-        {pokedexList}
+        <Container>{pokedexList}</Container>
       </div>
     </div>
   );
