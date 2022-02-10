@@ -21,7 +21,7 @@ const PokemonCard = (props) => {
         <p>{props.name}</p>
       </div>
       <ButtonContainer>
-        <button onClick={props.onClickAdd}>{props.buttonName}</button>
+        <button onClick={props.onClickHandle}>{props.buttonName}</button>
         {/* <button onClick={props.onClickRemove}>x</button> */}
         <button
           onClick={() => {
