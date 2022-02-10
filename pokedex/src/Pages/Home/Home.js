@@ -83,6 +83,7 @@ const Home = () => {
               name={capitalizeFirstLetter(pokemon && pokemon.name)}
               id={pokemon.id}
               onClickAdd = {() => addToPokedex(pokemon)}
+              buttonName={"Adicionar"}
 
             />
           );

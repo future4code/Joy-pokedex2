@@ -44,6 +44,7 @@ const Pokedex = () => {
             name={capitalizeFirstLetter(pokemon && pokemon.name)}
             id={pokemon.id}
             onClickRemove={() => removePokemon(pokemon)}
+            buttonName={"Remover"}
           />
         );
       })
