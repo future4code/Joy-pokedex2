@@ -1,34 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ContainerCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 150px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  img {
-    height: 4rem;
-    width: 4rem;
-  }
-  `
-
 export const Container = styled.div`
 display: flex;
-flex-direction: row;
-justify-content: center;
+flex-direction: column;
+justify-content: space-around;
 align-items: center;
 font-weight: bold;
 padding: 10px;
@@ -36,4 +12,149 @@ text-align: center;
 flex-wrap: wrap;
 column-gap: 50px;
 row-gap: 15px;
-`;
+  h1{
+    background-color: skyblue;
+    margin-top: 15px;
+  }
+
+`
+export const ContainerInfo = styled.div`
+  margin-left: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 15px;
+`
+
+export const Atacks = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 8px;
+  width: 190px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+      h3{
+        padding-bottom: 20px;
+        text-decoration: underline;
+      }
+      p{
+        padding-bottom: 10px;
+      }
+
+`
+export const PokemonType = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  width: 160px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: royalblue;
+`
+
+export const PokemonSize = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 8px;
+  width: 190px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+      h3{
+        margin-bottom: 30px;
+        text-decoration: underline;
+      }
+      p{
+        margin-bottom: 10px;
+      }
+`
+export const PokemonStatus = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 8px;
+  width: 190px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+      h3{
+        margin-bottom: 20px;
+        text-decoration: underline;
+      }
+      p{
+        margin-bottom: 10px;
+      }
+`
+
+export const PokemonFrontView = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 8px;
+  width: 190px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+      img{
+        height: 70px;
+        height: 70px;
+      }
+`
+
+export const PokemonBackView = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 8px;
+  width: 190px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  img{
+        height: 70px;
+        height: 70px;
+      }
+`
