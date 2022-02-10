@@ -9,8 +9,31 @@ import { BASE_URL } from "../../Constants/BASE_URL";
 
 const Home = () => {
   const { pokemonList, setPokemonList } = useContext(GlobalContext);
-  const history = useHistory();
+  const { pokedex, setPokedex } = useContext(GlobalContext);
   const [pokemons, setPokemons] = useState(pokemonList);
+
+  const addToPokedex = (pokemonToAdd) => {
+    console.log("entrou")
+
+    const position = pokedex.findIndex((pokemon) => {
+      return pokemon.id === pokemonToAdd.id;
+    });
+
+    console.log(position)
+
+    const newPokedex = [...pokedex];
+
+    console.log(newPokedex)
+
+    if(position === -1){
+      newPokedex.push({...pokemonToAdd})
+    }
+
+    setPokedex(newPokedex)
+
+  };
+
+
 
   useEffect(() => {
     if (pokemonList.lenght === 0 || !pokemonList[0]) {
@@ -59,6 +82,8 @@ const Home = () => {
               }
               name={capitalizeFirstLetter(pokemon && pokemon.name)}
               id={pokemon.id}
+              onClickAdd = {() => addToPokedex(pokemon)}
+
             />
           );
         })}
