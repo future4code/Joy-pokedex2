@@ -13,7 +13,6 @@ flex-wrap: wrap;
 column-gap: 50px;
 row-gap: 15px;
   h1{
-    background-color: skyblue;
     margin-top: 15px;
   }
 
@@ -21,13 +20,13 @@ row-gap: 15px;
 export const ContainerInfo = styled.div`
   margin-left: 250px;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
   font-weight: bold;
   padding: 10px;
   text-align: center;
   flex-wrap: wrap;
   column-gap: 50px;
-  row-gap: 15px;
+  row-gap: 30px;
 `
 
 export const Atacks = styled.div`
@@ -38,7 +37,7 @@ export const Atacks = styled.div`
   border: 2px solid black;
   padding: 8px;
   width: 190px;
-  height: 180px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -78,7 +77,7 @@ export const PokemonSize = styled.div`
   border: 2px solid black;
   padding: 8px;
   width: 190px;
-  height: 180px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -101,7 +100,7 @@ export const PokemonStatus = styled.div`
   border: 2px solid black;
   padding: 8px;
   width: 190px;
-  height: 180px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -125,7 +124,7 @@ export const PokemonFrontView = styled.div`
   border: 2px solid black;
   padding: 8px;
   width: 190px;
-  height: 180px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -146,7 +145,7 @@ export const PokemonBackView = styled.div`
   border: 2px solid black;
   padding: 8px;
   width: 190px;
-  height: 180px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
