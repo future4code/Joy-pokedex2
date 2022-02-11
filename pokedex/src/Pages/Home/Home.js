@@ -13,27 +13,30 @@ const Home = () => {
   const [pokemons, setPokemons] = useState(pokemonList);
 
   const addToPokedex = (pokemonToAdd) => {
-    console.log("entrou")
+    console.log("entrou");
 
     const position = pokedex.findIndex((pokemon) => {
       return pokemon.id === pokemonToAdd.id;
     });
 
-    console.log(position)
+    console.log(position);
 
     const newPokedex = [...pokedex];
 
-    console.log(newPokedex)
+    console.log(newPokedex);
 
-    if(position === -1){
-      newPokedex.push({...pokemonToAdd})
+    if (position === -1) {
+      newPokedex.push({ ...pokemonToAdd });
     }
 
-    setPokedex(newPokedex)
+    setPokedex(newPokedex);
 
+    const newPokemonList = pokemons.filter(
+      (pokemon) => pokemon.id !== pokemonToAdd.id
+    );
+
+    setPokemons(newPokemonList);
   };
-
-
 
   useEffect(() => {
     if (pokemonList.lenght === 0 || !pokemonList[0]) {
@@ -60,7 +63,10 @@ const Home = () => {
           console.log("Erro ao carregar lista de pokemons", err);
         });
     } else {
-      setPokemons(pokemonList);
+      const newPokemonList = pokemons.filter(
+        (pokemon) => !pokedex.some((item) => item.id === pokemon.id)
+      );
+      setPokemons(newPokemonList);
     }
   }, []);
 
@@ -82,9 +88,8 @@ const Home = () => {
               }
               name={capitalizeFirstLetter(pokemon && pokemon.name)}
               id={pokemon.id}
-              onClickHandle = {() => addToPokedex(pokemon)}
+              onClickHandle={() => addToPokedex(pokemon)}
               buttonName={"Adicionar"}
-
             />
           );
         })}
