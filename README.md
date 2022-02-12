@@ -17,7 +17,7 @@ O que funciona:
 - [x] Todas as funcionalidades pedidas no projeto como obrigatórias para a entrega foram feitas.
 - [x] Na página Home o problema do refresh foi solucionado colocando um condicional que faz a requisição da API PokeAPI novamente, fazendo com que os pokemóns
 permaneçam na tela.
-- [x] A responsividade foi feita em quase todas as áreas do LabeDex
+- [x] A responsividade foi feita em quase todas as áreas do Pokedex
 
 O que não funciona (os itens listados aqui faziam parte dos desafios): 
 - [ ] A responsividade na página de detalhes do pokemon.
